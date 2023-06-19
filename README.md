@@ -17,3 +17,26 @@ Wykorzystane narzędzia:
 -	PHP Strorm 2022.1.2 – (https://www.jetbrains.com/phpstorm/download/#section=windows)
      Licencja edukacyjna
 -	Xampp v3.3.0 (https://www.apachefriends.org/pl/download.html) Licencja GNU
+
+
+
+Uruchomienie aplikacji:
+
+
+Do uruchomienia aplikacji potrzebujemy przede wszystkim środowisko programistyczne, może nim być PHP Storm lub Visual Studio Code. Po zainstalowaniu środowiska należy wypakować folder „Komis.rar” i otworzyć projekt wybierając ten folder jako ścieżkę.
+Następnie potrzebować będziemy composer czyli narzędzie do zarządzania zależnościami w naszym projekcie. Dodajemy go używając komendy: composer install.
+Aby mieć możliwość działania na bazie danych należy zainstalować Xampp Control Panel, po zainstalowaniu otwieramy program i uruchamiamy moduł Apache oraz MySQL.
+
+Następnie klikamy opcję „Admin” aby wyświetlić nasz serwer bazy danych w którym tworzymy bazę o nazwie „komis” wybierając charset  „utf8mb4_polish_ci”
+
+
+W pliku .env w naszym projekcie ustawiamy DB_DATABASE na komis.
+
+Po wykonaniu powyższych kroków wpisujemy w terminalu:
+-	php artisan firstconfig     -     w celu wykonania pierwszej konfiguracji
+-	nmp install   -  w celu zainstalowania zależności
+-	php artisan serve      -    w celu uruchomienia serwera aplikacji
+
+Do aplikacji logujemy się danymi administratora zawartymi w seedzie,  
+Email: admin@example.com
+Hasło: admin 
